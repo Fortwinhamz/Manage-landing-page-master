@@ -199,7 +199,6 @@ header button:hover {
   background-color: hsl(12deg, 88%, 59%);
   padding: 3rem 7rem;
   justify-content: space-around;
-  background: linear-gradient(hsl(12deg, 88%, 59%), url(./images/bg-simplify-section-desktop.svg));
 }
 .simplify h1 {
   width: 26%;
@@ -279,6 +278,9 @@ header button:hover {
 }
 
 @media only screen and (max-width: 768px) {
+  .navbar {
+    width: 100%;
+  }
   .navbar .nav-menu {
     flex-direction: column;
     position: fixed;
@@ -309,5 +311,124 @@ header button:hover {
   }
   .navbar .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+  .navbar button {
+    margin-bottom: 3rem;
+  }
+  header {
+    padding: 0 4rem;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+  }
+  header .header-text h1 {
+    font-size: 2rem;
+  }
+  header .header-img img {
+    width: 70%;
+  }
+  .testimonials .slider {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2rem 4rem;
+  }
+  .main-footer {
+    padding: 2rem 6rem;
+  }
+}
+@media only screen and (max-width: 425px) {
+  body {
+    width: 100%;
+  }
+  header {
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+  }
+  header .header-text {
+    width: 100%;
+    text-align: center;
+  }
+  header .header-text h1 {
+    font-size: 2.9rem;
+    width: 100%;
+  }
+  header .header-img {
+    width: 100%;
+  }
+  header .header-img img {
+    width: 100%;
+  }
+  .difference {
+    display: flex;
+    flex-direction: column;
+  }
+  .difference .difference-text {
+    text-align: center;
+  }
+  .difference .difference-text h2 {
+    font-size: 3.5rem;
+    border-top: 4px solid red;
+  }
+  .difference .difference-text p {
+    font-size: 2rem;
+    width: 100%;
+    margin: 2rem 0;
+  }
+  .difference .difference-lists {
+    width: 100%;
+  }
+  .difference .difference-lists .columns {
+    width: 100%;
+    padding: 2rem;
+  }
+  .difference .difference-lists .columns span {
+    font-size: 2rem;
+  }
+  .difference .difference-lists .columns .text {
+    width: 100%;
+  }
+  .difference .difference-lists .columns .text h3 {
+    font-size: 2.1rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    background: hsl(13deg, 100%, 96%);
+  }
+  .difference .difference-lists .columns .text p {
+    font-size: 2rem;
+    width: 100%;
+  }
+  .testimonials .slider {
+    display: flex;
+    flex-direction: column;
+  }
+  .testimonials button {
+    padding: 1.2rem 2.9rem;
+  }
+  .simplify {
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+  }
+  .simplify h1 {
+    width: 100%;
+    text-align: center;
+  }
+  .simplify button {
+    text-align: center;
+  }
+  .main-footer {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .main-footer .rows {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+  }
+  .main-footer .searchh p {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
