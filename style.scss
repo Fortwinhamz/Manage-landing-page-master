@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
-
-$primary-color: hsl(228, 39%, 23%);
-$color-bright-red: hsl(12, 88%, 59%);
-$color-Vary-Light-Gray: hsl(0, 0%, 98%);
-$color-Very-Pale-Red: hsl(13, 100%, 96%);
-$color-Very-Dark-Blue: hsl(233, 12%, 13%);
-$color-Dark-Grayish-Blue: hsl(227, 12%, 61%);
-
+@import 'config';
 *{
     font-family: 'Lato' , sans-serif;
     box-sizing: border-box;
@@ -14,7 +7,7 @@ $color-Dark-Grayish-Blue: hsl(227, 12%, 61%);
     padding: 0;
     list-style-type: none;
     text-decoration: none;
-    // font-size: 62.5%;
+    font-size: 62.5%;
 }
 body{
     background: url(images/bg-simplify-section-desktop.svg);
@@ -35,8 +28,8 @@ body{
         align-items: center;
         font-weight:700;
         .nav-item{
-            padding: 0 1.25rem;
-            font-size: 0.8rem;
+            padding: 0 1.5rem;
+            font-size: 2.2rem;
 
             .nav-link{
                 transition: all 0.3s ease-in 0s;
@@ -59,7 +52,7 @@ body{
       background: $color-bright-red;
       color: #fff;
       font-weight: 700;
-      font-size: 0.8rem;
+      font-size: 1.3rem;
       transition: all .3s ease-in 0s;
 
       &:hover{
@@ -87,6 +80,7 @@ header{
     display: flex;
     padding: 2rem 5%;
     justify-content: space-around;
+    margin: 4rem 0 ;
 
 
     .header-text{
@@ -95,7 +89,7 @@ header{
 
 
         h1{
-            font-size: 3rem;
+            font-size: 4rem;
             margin: 1.2rem 0;
             // width: 50%;
             color: $primary-color;
@@ -103,7 +97,8 @@ header{
 
 
         p{
-            margin: 1.2rem 0;
+            margin: 1.6rem 0;
+            font-size: 1.7rem;
             // width: 40%;
             color: $color-Dark-Grayish-Blue;
         }
@@ -123,7 +118,7 @@ header{
         background: $color-bright-red;
         color: #fff;
         font-weight: 700;
-        font-size: 0.8rem;
+        font-size: 1.5rem;
         transition: all .3s ease-in 0s;
   
         &:hover{
@@ -141,7 +136,7 @@ header{
 
         // width: 50%;
         h2{
-            font-size: 2rem;
+            font-size: 3rem;
             font-weight:900;
             color: $primary-color;
         }
@@ -150,6 +145,7 @@ header{
             color: $color-Dark-Grayish-Blue;
             margin: 1.2rem 0;
             width: 70%;
+            font-size: 1.4rem;
         }
     }
 
@@ -165,17 +161,19 @@ header{
                 width:60px;
                 height: 30px;
                 margin: 1.2rem 0;
+                font-size: 1.5rem;
             }
 
 
             .text{
                 margin:0 1.2rem;
                 width: 50%;
+                color: $primary-color;
+                font-size: 2rem;
 
                 h3{
-
                     margin: 1.2rem 0;
-
+                    font-size: 2rem;
                 }
             }
         }
@@ -187,6 +185,7 @@ header{
         // text-align: center;
         color: $primary-color;
         margin: 2.5rem 0;
+        font-size: 3rem;
     }
     
     text-align: center;
@@ -207,18 +206,26 @@ header{
             border: 2px solid $color-Dark-Grayish-Blue;
             margin: 1rem 0.5rem ;
             padding: 1.3rem;
+            font-size: 2rem;
             transition: all .7s ease-in-out;
 
-            &:nth-child(4){
 
-                display: none;
+
+            h3{
+                font-size: 1.7rem;
             }
 
+
+            // &:nth-child(4){
+            //     // display: none;
+            // }
+
             &:hover{
-              transform: scale(0.897) translate(20px , 5px)  ;
+                transition: all 1s ease-in-out;
+            //   transform: scale(0.897) translate(20px , 5px) rotate(360deg) ;
             //   transform: rotate(90deg);
             // transform: matrix(23)skew(5deg, 5deg);
-            transform:scale(0.9) translateY(-40px);
+            transform:scale(0.9) translateY(-30px);
 
             }
 
@@ -238,7 +245,7 @@ header{
         background: $color-bright-red;
         color: #fff;
         font-weight: 700;
-        font-size: 0.8rem;
+        font-size: 1.3rem;
         transition: all .3s ease-in 0s;
         &:hover{
         background-color: $color-Very-Pale-Red;
@@ -246,55 +253,169 @@ header{
     } 
 }
 
-@media only screen and (max-width:768px){
 
-    .navbar{
+.simplify{
+    display: flex;
+    background-color: $color-bright-red;
+    padding: 3rem 7rem;
+    justify-content: space-around;
+    background: linear-gradient($color-bright-red, url(./images/bg-simplify-section-desktop.svg)); 
+
+    h1{
+        width: 26%;
+        color: #fff;
+        font-size: 2.5rem;
+    }
+
     
-        .nav-menu{
+    button{
+        margin: 1.5rem 0;
+          cursor: pointer;
+          padding: 0.50rem 1.25rem;
+          border-radius: 1.5rem;
+          border: none;
+          background:#fff;
+          color: $color-bright-red;
+          font-weight: 700;
+          font-size: 1.4rem;
+          transition: all .3s ease-in 0s;
+          &:hover{
+          background-color: #fff;
+          }
+      } 
+}
 
-            flex-direction: column;
-            position: fixed;
-            left: -100%;
-            top: 5rem;
-            width: 100%;
-            background: #fff;
-            border-radius: 10px;
-            text-align: center;
-            transition: 0.3s;
-            box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
 
-            &.active{
-                left: 0;
-            }
+.main-footer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: $color-Very-Dark-Blue;
+    color: #fff;
+    padding: 4rem 10rem;
+
+    font-size: 2.8rem;
+
+    .logos{
+        img{
+            object-fit: cover;
+            margin:0 3rem 2rem 0
         }
 
-        .nav-item{
-            margin: 1.5rem 0;
-        }
-
-        .hamburger{
-            display:block;
+        .socials .fa-brands{
+            padding: 0 .4rem;
+            font-size: 1.8rem;
             cursor: pointer;
-
-            &.active{
-
-                .bar:nth-child(2){
-                    opacity: 0;
-                }
+        }
+    }
 
 
-                .bar:nth-child(1){
-                    transform: translateY(8px) rotate(45deg);
-                }
+    .row1{
+        ul{
+            li{
+                line-height: 2rem;
 
-                .bar:nth-child(3){
-                    transform: translateY(-8px) rotate(-45deg);
+                a{
+                    color: #fff;
+                    font-size: 1.4rem;
                 }
             }
         }
     }
-    
 
+    .searchh{
+        margin-right: 1rem;
+        .top{
+         margin: 0 0  2rem 0;  
+         
+         input{
+            padding: 1rem 1.5rem;
+            font-family: cursive;
+            border-radius: 1.5rem;
+            font-size: 1.2rem;
+            
+         }
+
+
+
+         button{
+              margin: .5rem 0;
+              cursor: pointer;
+              padding: 1rem 2rem;
+              border-radius: 1.5rem;
+              border: none;
+              background:#fff;
+              color: $color-bright-red;
+              font-weight: 700;
+              font-size: 1.2rem;
+              transition: all .3s ease-in 0s;
+              &:hover{
+              background-color: #fff;
+              }
+            } 
+
+        }
+
+
+
+        p{
+            color: $color-Vary-Light-Gray;
+        }
+    }
+}
+
+@media only screen and (max-width:768px){
+
+
+  .navbar{
     
+    .nav-menu{
+
+      flex-direction: column;
+      position: fixed;
+      left: -100%;
+      top: 5rem;
+      width: 100%;
+      background: #fff;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+
+      &.active{
+          left: 0;
+      }
+    }
+
+    .nav-item{
+        margin: 1.5rem 0;
+    }
+
+    .hamburger{
+        display:block;
+        cursor: pointer;
+
+      &.active{
+
+        .bar:nth-child(2){
+            opacity: 0;
+        }
+
+
+        .bar:nth-child(1){
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .bar:nth-child(3){
+            transform: translateY(-8px) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+
+
+  header{
+    
+  }
 }
 
