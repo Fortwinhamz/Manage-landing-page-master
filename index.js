@@ -8,6 +8,7 @@ function mobileMenu(){
     navMenu.classList.toggle('active')
 }
 
+
 //For the hamburger menu to close when we click on a link
 
 const navLink = document.querySelectorAll('.nav-link');
